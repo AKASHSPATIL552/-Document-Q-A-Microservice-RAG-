@@ -75,6 +75,8 @@ uvicorn app.main:app --reload
 The API will be available at: `http://127.0.0.1:8000`
 
 ## 📡 API Endpoints
+<img width="1916" height="963" alt="image" src="https://github.com/user-attachments/assets/088da21c-ad5e-4c27-98ce-0f73a65bf0dc" />
+
 
 ### 1. Health Check
 ```bash
@@ -86,14 +88,19 @@ GET /health
   "status": "healthy"
 }
 ```
+<img width="1903" height="964" alt="image" src="https://github.com/user-attachments/assets/5f35bf94-d02d-4e89-b5d6-e898f7b69b0a" />
+
 
 ### 2. Upload Document
 ```bash
 POST /upload
 ```
+<img width="1919" height="723" alt="image" src="https://github.com/user-attachments/assets/70d5bea6-43e9-4a6b-b97c-64ca76e5760d" />
+
 **Request:**
 - Content-Type: `multipart/form-data`
 - Body: file (PDF or TXT)
+
 
 **Example using cURL:**
 ```bash
@@ -101,6 +108,8 @@ curl -X POST "http://127.0.0.1:8000/upload" \
   -H "Content-Type: multipart/form-data" \
   -F "file=@document.pdf"
 ```
+<img width="1919" height="746" alt="image" src="https://github.com/user-attachments/assets/b6f3a88b-3d38-402f-bb75-f8b9fc0726be" />
+
 
 **Response:**
 ```json
@@ -110,6 +119,8 @@ curl -X POST "http://127.0.0.1:8000/upload" \
   "chunks": 15
 }
 ```
+
+
 
 ### 3. Query Document
 ```bash
@@ -123,6 +134,8 @@ POST /query
   "question": "What is this document about?"
 }
 ```
+<img width="1916" height="971" alt="image" src="https://github.com/user-attachments/assets/2b39643c-ab5d-4474-925f-8a5171999800" />
+
 
 **Example using cURL:**
 ```bash
@@ -138,6 +151,8 @@ curl -X POST "http://127.0.0.1:8000/query" \
   "answer": "This document discusses..."
 }
 ```
+<img width="1916" height="968" alt="image" src="https://github.com/user-attachments/assets/82034c63-c53e-4cde-8a4f-1b1a3cd03119" />
+
 
 ## 🧪 Testing the API
 
